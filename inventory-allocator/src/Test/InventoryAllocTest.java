@@ -81,6 +81,7 @@ public class InventoryAllocTest {
         testInventoryAllocator();
     }
 
+    // general test
     public void test4(){
         order = new HashMap<String, Integer>(){{
             put("apple", 10);
