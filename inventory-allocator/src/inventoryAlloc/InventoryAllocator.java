@@ -42,7 +42,7 @@ public class InventoryAllocator {
                 String orderFruit = odr.getKey();
                 Integer reqNum = odr.getValue();
                 if(reqNum > 0 && fruits.containsKey(orderFruit)){
-                    int numAlloc = Math.min(order.get(orderFruit), fruits.get(orderFruit));
+                    int numAlloc = Math.min(reqNum, fruits.get(orderFruit));
                     odr.setValue(reqNum - numAlloc);
                     fruits.put(orderFruit, fruits.get(orderFruit) - numAlloc);
                     alloc.put(orderFruit, alloc.getOrDefault(orderFruit, 0) + numAlloc);
