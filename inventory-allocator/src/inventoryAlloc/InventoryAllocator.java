@@ -50,7 +50,13 @@ public class InventoryAllocator {
             }
 
             if(!alloc.isEmpty()) {
-                res.put(invName, alloc);
+                if(res.containsKey(invName)) {
+                    for(Map.Entry<String, Integer> item: alloc.entrySet()){
+                        res.get(invName).put(item.getKey(), item.getValue());
+                    }
+                } else {
+                    res.put(invName, alloc);
+                }
             }
             if(checkOrderDone(order)){
                 break;
