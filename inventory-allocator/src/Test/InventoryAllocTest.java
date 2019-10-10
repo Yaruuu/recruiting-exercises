@@ -87,15 +87,20 @@ public class InventoryAllocTest {
             put("apple", 10);
             put("pear", 3);
             put("orange", 3);
+            put("peach", 4);
+            put("banana", 10);
         }};
 
         Inventory inventory1 = new Inventory("owd", new HashMap<String, Integer>(){{
             put("apple", 5);
             put("pear", 2);
+            put("peach", 4);
+
         }});
         Inventory inventory2 = new Inventory("dm", new HashMap<String, Integer>(){{
             put("apple", 5);
             put("orange", 1);
+            put("banana", 10);
         }});
         Inventory inventory3 = new Inventory("wer", new HashMap<String, Integer>(){{
             put("apple", 5);
